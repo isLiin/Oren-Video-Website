@@ -1,0 +1,138 @@
+
+/* ============================================ */
+/* ============================================ */
+/* ================REPONSTIVE================== */
+/* ============================================ */
+
+
+/* reponstive SmastPhone max-w: 576px */
+@media screen and (max-width: 576px) {
+    .infor{
+        max-width: 90px;
+    }
+    .infor .message,
+    .infor .bell, 
+    .infor .upload,
+    .search-video{
+        display: none;
+    }
+    .list-infor-item{
+        right: -5px;
+        width: 200px;
+    }
+    .user:hover .list-infor-item{
+        top: 7vh;
+    }
+}
+
+/* reponstive SmastPhone max-w: 567px */
+@media screen and (min-width: 567px) {
+    
+    .infor{
+        max-width: 350px !important;
+    }
+    /* ======================== */
+    .infor .message,
+    .infor .bell, 
+    .infor .upload{
+        display: block;
+        font-size: 25px;
+        margin: 0 10px;
+    }
+    .search-video{
+        display: none;
+    }
+    .list-infor-item{
+        right: -5px;
+        width: 200px;
+    }
+    .user:hover .list-infor-item{
+        top: 7vh;
+    }
+    /* ==========Navigarion========= */
+    .navigation{        
+        height: 80px;
+    }
+    /* ================SLIDE SHOW===================== */
+    .slide-show{
+        height: 350px;
+    }
+    /* ================Service===================== */
+    .service .card{   
+        margin: 5px;
+        width: 48% !important;
+    }
+    /* ================Category===================== */
+    
+    .container-category .card{
+        width: 25%;
+        margin: 10px;
+        height: 300px !important;
+    }
+
+    
+    .main-block {
+        top: 0;
+        left: 5vh !important; 
+        flex-direction: row !important;
+    }
+}
+
+
+/* show input search */
+@media screen and (min-width: 976px) {
+    .search-video{
+        width: 35%;
+        display: flex;
+        position: relative;
+    }
+    .search-video input{
+        width: 100%;
+        border: none;
+        background: var(--bg);
+        padding: 5px 15px;
+        border-radius: 50px;
+    }
+    .search-video button{
+        color: grey;
+        border: none;
+        right: 35px;
+        background: none;
+        padding: 0 10px;
+        border-radius: 50px;
+        position: relative;
+    }
+    /* ==========Navigarion========= */
+    .navigation,
+    .navigation ul{
+        justify-content: flex-start;
+    }
+    /* ================SLIDE SHOW===================== */
+    .slide-show{
+        height: 550px;
+    }   
+    /* ================Service===================== */
+    .service {
+        max-width: 80%;
+    }
+    .service .card{
+        margin: 5px;
+        width: 24% !important;
+    }
+    
+    /* ================Category===================== */
+    
+    .container-category .card{
+        width: 14%;
+        float: left;
+        margin-left: 30px;
+        height: 350px !important;
+    }
+    .main-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 700px !important;
+    }
+
+}

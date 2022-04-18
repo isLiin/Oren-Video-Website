@@ -1,0 +1,385 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --bg: #e2ebef;
+    --bg1:rgb(255, 255, 255);
+}
+body{
+    background: var(--bg1);
+}
+/* Header */
+.hide-logo{
+    display: none;
+}
+.message, .bell{
+    cursor: pointer;
+    position: relative;
+}
+
+.mess-bell{
+    top: 9px;
+    right: -4px;
+    font-weight: 500;
+    background: tomato;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    color: yellow;
+    font-size: 13px;
+    /* border: 1px solid red; */
+    padding: 1px 2px;
+    border-radius: 50px;
+}
+.theme-dark{    
+    background: rgb(59, 55, 55) !important; 
+}
+.theme-dark .mybtn{
+    color: rgb(59, 55, 55) !important; 
+    background: var(--bg) !important; 
+}
+.theme-dark .signin,
+.theme-dark .group-list-menu,
+.theme-dark .list-infor-item{     
+    background: rgb(59, 55, 55) !important; 
+    color: blanchedalmond !important;
+}
+.theme-dark a,
+.theme-dark li,
+.theme-dark div{
+    color: blanchedalmond !important;
+}
+.theme-dark a:hover,
+.theme-dark div:hover{
+    color: blue !important; 
+}
+
+.content-header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    z-index: 999;
+    position: sticky;
+    background: var(--bg1);
+    align-items: center;
+    box-shadow: 0px 3px 13px rgb(24 24 24);
+    justify-content: space-between;
+}
+.content-header div.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.content-header .menu{
+    width: 50px;
+    font-size: 20px;
+}
+.content-header .menu:hover{
+    cursor: pointer;
+}
+.content-header .logo{
+    width: 90px;
+}
+.content-header .logo .img-logo{
+    width: 100%;
+    height: 100%;
+}
+.content-header .logo .img-logo img{
+    width: 80%;
+    height: 30%;
+}
+
+/* ========User====== */
+.infor .avt-user{
+    width: 55px;
+    height: 80% !important;
+    overflow: hidden;
+    box-shadow: 0 0 3px 1.3px rgba(77, 75, 75, 0.445);
+    border-radius: 50px;
+}
+.infor{
+    width: 100%;
+    justify-content: space-around !important;
+}
+
+.mybtn{
+    text-decoration: none;
+    box-shadow: 2px 2px 6px 1px rgb(73, 66, 66);
+    font-size: 18px;
+    padding: 5px 23px;
+    background: var(--bg);
+    border-radius: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+.mybtn:hover{
+    box-shadow: 0 0 4px black;
+    text-decoration: none;
+    background-color: var(--bg);
+}
+/* ============================================ */
+.list-menu-header>div{
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding-left: 5%;
+    float: left;    
+}
+.list-menu-header div.signin{
+    height: 50px;
+}
+.list-menu-header div.signin a{
+    width: 80%;
+}
+.list-menu-header .group-list-menu{
+    background: var(--bg1);
+}
+.group-list-menu{
+    align-items: flex-start;
+}
+.group-list-menu>label{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: grey;
+}
+.group-list-menu>div,
+.group-list-menu>a{
+    height: 50px;
+    color: black;
+    display: flex;    
+    align-items: center;
+    text-transform: capitalize;
+}
+.group-list-menu>a>span>img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+.group-list-menu>a>span.numb-sub{
+    color: rgba(128, 128, 128, 0.685);
+}
+
+.group-list-menu>div:hover,
+.group-list-menu>a:hover{
+    background: var(--bg);
+    border-radius: 0 70px 70px 0;
+    color: blue;
+    text-decoration: none;
+    box-shadow: 0 0 3px black;
+}
+/* ===============Animation==================== */
+.web-icon .menu{
+    position: relative;
+}
+.list-menu-header{
+    top: 6.5vh;
+    left: -500px;
+    width: 0px;
+    height: 93vh;
+    z-index: 999;
+    display: flex;
+    /* overflow: auto; */
+    position: absolute;
+    flex-wrap: wrap;
+    transition: 1.3s;
+    background: whitesmoke;
+    flex-direction: column;
+    box-shadow: 0 0 3px 1.3px rgba(77, 75, 75, 0.445);
+}
+
+.list-menu-header>div{
+    opacity: 0;
+}
+.web-icon .menu:hover .list-menu-header{    
+    left: 0;
+    width: 350px;
+    transition: 1.2s;
+}
+.web-icon .menu:hover .list-menu-header>div{
+    opacity: 1;
+    transition: 1.6s;
+}
+/* ============================================ */
+.user{
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+.list-infor-item{
+    top: -600px;
+    right: 0;
+    height: 45vh;
+    width: 0;
+    transition: 0.4s;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    background: whitesmoke;
+    box-shadow: 0 0 3px 1.3px rgba(77, 75, 75, 0.445);
+}
+.user:hover .list-infor-item{
+    top: 6.5vh;
+    opacity: 1;
+    width: 300px;
+    transition: 1.4s;
+}
+
+.list-infor-item>div{
+    width: 100%;
+    height: 35px;
+}
+
+/* =============================================== */
+/* =============================================== */
+/* =============================================== */
+/* ================NAVIGATION===================== */
+
+
+.navigation{
+    width: 100%;
+    height: 140px;
+    padding: 15px 0 0 0;
+    display: flex;
+    border-bottom: 1px solid #272626;
+    justify-content: space-between;
+    background: var(--bg1);
+}
+.navigation ul{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.navigation ul>li{
+    cursor: pointer;
+    list-style-type: none;
+    padding: 5px 15px;
+    color: black;
+}
+.navigation ul>li:hover {
+    background: var(--bg);
+    color: blue !important;
+}
+
+
+/* =============================================== */
+/* =============================================== */
+/* =============================================== */
+/* ================SLIDE SHOW===================== */
+.slide-show{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-image: url('/Img/banner-img.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+}
+.slide-show .background-hide{
+    width: 100%;
+    height: 100%;
+    background: rgba(105, 57, 57, 0.418);
+}
+.slide-show .content-slide{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    color: blanchedalmond;
+}
+.slide-show .content-slide:focus{
+    color: white !important;
+}
+.slide-show .content-slide>a{
+    background: var(--bg1);
+    padding: 5px 15px;
+    border-radius: 50px;
+    margin: 15px 0;
+    text-transform: capitalize;
+    color: black !important;
+}
+.slide-show .content-slide>p{
+    position: absolute;
+    bottom: 5%;
+}
+.slide-show .content-slide>p>a{
+    color: honeydew;
+}
+/* =============================================== */
+/* =============================================== */
+/* =============================================== */
+/* ===================SERVIDE===================== */
+.service {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+.service .card{
+    width: 100%;
+    cursor: pointer;
+    height: 250px;
+    display: flex;
+    overflow: hidden;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.service .card img.card-img-top{
+    width: 90px;
+    height: 90px;
+}
+.service .card p{
+    color: grey;
+}
+.service .card:hover{
+    box-shadow: 0 0 3px #272626;
+    z-index: 1;
+}
+.service .card:hover img.card-img-top{
+    width: 100px;
+    height: 100px;
+}
+
+/* =============================================== */
+/* =============================================== */
+/* =============================================== */
+/* ===================CATEGORY==================== */
+.container-category{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-end;
+}
+
+.container-category .card{
+    width: 80%;
+    margin: 10px 0;
+    height: 450px !important;
+}
+
+.container-category .card:hover{
+    cursor: pointer;
+    color: blue !important;
+    box-shadow: 0 0 14px 2px #272626;
+}
+.container-category .card:hover img.card-img-top{
+    opacity: 0.3;
+}
+.container-category .card img.card-img-top{
+    width: 100%;
+    height: 400px;
+}
